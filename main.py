@@ -24,7 +24,7 @@ env_method = os.getenv('PUSH_METHOD')
 headers = json.loads(json.dumps(eval(env_headers))) if env_headers else local_headers
 cookies = json.loads(json.dumps(eval(env_cookies))) if env_cookies else local_cookies
 # 取一个随机的阅读时间，READ_NUM在100-200之间
-number = int(env_num) if env_num not in (None, '') else random.randint(100, 200)
+number = int(env_num) if env_num not in (None, '') else random.randint(110, 210)
 
 def encode_data(data):
     return '&'.join(f"{k}={urllib.parse.quote(str(data[k]), safe='')}" for k in sorted(data.keys()))
